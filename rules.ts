@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
+import { app, createHyperSubLayers, open, rectangle } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -56,9 +56,9 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
+    // spacebar: open(
+    //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
+    // ),
     // b = "B"rowse
     b: {
       t: open("https://twitter.com"),
@@ -71,32 +71,26 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      g: app("Google Chrome"),
+      g: app("Arc"),
       c: app("Notion Calendar"),
       v: app("Visual Studio Code"),
       d: app("Discord"),
       s: app("Slack"),
       e: app("Superhuman"),
       n: app("Notion"),
-      t: app("Terminal"),
+      t: app("kitty"),
       // Open todo list managed via *H*ypersonic
-      h: open(
-        "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      ),
+      // h: open(
+      //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
+      // ),
       z: app("zoom.us"),
       // "M"arkdown (Obsidian.md)
       m: app("Obsidian"),
       f: app("Finder"),
       r: app("Texts"),
       // "i"Message
-      i: app("Texts"),
+      i: app("Messenger"),
       p: app("Spotify"),
-      a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
-      w: open("Texts"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
     },
 
     // TODO: This doesn't quite work yet.
@@ -249,7 +243,7 @@ const rules: KarabinerRules[] = [
         `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
       ),
       // "T"heme
-      t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
+      // t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
       c: open("raycast://extensions/raycast/system/open-camera"),
     },
 
@@ -269,23 +263,23 @@ const rules: KarabinerRules[] = [
         to: [{ key_code: "right_arrow" }],
       },
       // Magicmove via homerow.app
-      m: {
-        to: [{ key_code: "f", modifiers: ["right_control"] }],
-        // TODO: Trigger Vim Easymotion when VSCode is focused
-      },
+      // m: {
+      //   to: [{ key_code: "f", modifiers: ["right_control"] }],
+      //   // TODO: Trigger Vim Easymotion when VSCode is focused
+      // },
       // Scroll mode via homerow.app
-      s: {
-        to: [{ key_code: "j", modifiers: ["right_control"] }],
-      },
-      d: {
-        to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
-      },
-      u: {
-        to: [{ key_code: "page_down" }],
-      },
-      i: {
-        to: [{ key_code: "page_up" }],
-      },
+      // s: {
+      //   to: [{ key_code: "j", modifiers: ["right_control"] }],
+      // },
+      // d: {
+      //   to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
+      // },
+      // u: {
+      //   to: [{ key_code: "page_down" }],
+      // },
+      // i: {
+      //   to: [{ key_code: "page_up" }],
+      // },
     },
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
@@ -325,30 +319,30 @@ const rules: KarabinerRules[] = [
       ),
     },
   }),
-  {
-    description: "Change Backspace to Spacebar when Minecraft is focused",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          key_code: "delete_or_backspace",
-        },
-        to: [
-          {
-            key_code: "spacebar",
-          },
-        ],
-        conditions: [
-          {
-            type: "frontmost_application_if",
-            file_paths: [
-              "^/Users/mxstbr/Library/Application Support/minecraft/runtime/java-runtime-gamma/mac-os-arm64/java-runtime-gamma/jre.bundle/Contents/Home/bin/java$",
-            ],
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   description: "Change Backspace to Spacebar when Minecraft is focused",
+  //   manipulators: [
+  //     {
+  //       type: "basic",
+  //       from: {
+  //         key_code: "delete_or_backspace",
+  //       },
+  //       to: [
+  //         {
+  //           key_code: "spacebar",
+  //         },
+  //       ],
+  //       conditions: [
+  //         {
+  //           type: "frontmost_application_if",
+  //           file_paths: [
+  //             "^/Users/mxstbr/Library/Application Support/minecraft/runtime/java-runtime-gamma/mac-os-arm64/java-runtime-gamma/jre.bundle/Contents/Home/bin/java$",
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 fs.writeFileSync(
