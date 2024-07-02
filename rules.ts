@@ -71,11 +71,12 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      g: app("Arc"),
+      a: app("Arc"),
       c: app("Notion Calendar"),
       v: app("Visual Studio Code"),
       d: app("Discord"),
       s: app("Slack"),
+      z: app("Zalo"),
       e: app("Superhuman"),
       n: app("Notion"),
       t: app("kitty"),
@@ -83,7 +84,6 @@ const rules: KarabinerRules[] = [
       // h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
       // ),
-      z: app("zoom.us"),
       // "M"arkdown (Obsidian.md)
       m: app("Obsidian"),
       f: app("Finder"),
