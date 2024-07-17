@@ -71,25 +71,31 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      a: app("Arc"),
+      b: app("Arc"),
+      t: app("kitty"),
+      // Note
+      n: app("Notion"),
+      m: app("Obsidian"),
       c: app("Notion Calendar"),
+      // Code
       v: app("Visual Studio Code"),
+      w: app("WebStorm"),
+      j: app("IntelliJ IDEA Ultimate"),
+      // Chat
+      i: app("Messenger"),
       d: app("Discord"),
       s: app("Slack"),
       z: app("Zalo"),
-      e: app("Superhuman"),
-      n: app("Notion"),
-      t: app("kitty"),
+      l: app("Telegram"),
+      e: app("Microsoft Teams"),
       // Open todo list managed via *H*ypersonic
       // h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
       // ),
       // "M"arkdown (Obsidian.md)
-      m: app("Obsidian"),
       f: app("Finder"),
       r: app("Texts"),
       // "i"Message
-      i: app("Messenger"),
       p: app("Spotify"),
     },
 
@@ -126,6 +132,7 @@ const rules: KarabinerRules[] = [
       h: rectangle("left-half"),
       l: rectangle("right-half"),
       f: rectangle("maximize"),
+      c: rectangle("center"),
       u: {
         description: "Window: Previous Tab",
         to: [
@@ -299,9 +306,9 @@ const rules: KarabinerRules[] = [
     r: {
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
       n: open("raycast://script-commands/dismiss-notifications"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-      ),
+      // l: open(
+      //   "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
+      // ),
       e: open(
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
