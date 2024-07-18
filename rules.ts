@@ -242,6 +242,20 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      close_bracket: {
+        to: [
+          {
+            key_code: "fastforward",
+          },
+        ],
+      },
+      open_bracket: {
+        to: [
+          {
+            key_code: "rewind",
+          },
+        ],
+      },
       e: open(
         `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
       ),
