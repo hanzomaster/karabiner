@@ -64,15 +64,17 @@ const rules: KarabinerRules[] = [
       t: open("https://twitter.com"),
       // Quarterly "P"lan
       p: open("https://qrtr.ly/plan"),
-      y: open("https://news.ycombinator.com"),
+      y: open("https://www.youtube.com"),
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
+      g: open("https://mail.google.com"),
+      h: open("https://github.com"),
     },
     // o = "Open" applications
     o: {
       1: app("1Password"),
       b: app("Arc"),
-      t: app("kitty"),
+      t: app("Warp"),
       // Note
       n: app("Notion"),
       m: app("Obsidian"),
@@ -81,10 +83,11 @@ const rules: KarabinerRules[] = [
       v: app("Visual Studio Code"),
       w: app("WebStorm"),
       j: app("IntelliJ IDEA Ultimate"),
+      k: app("Docker"),
       // Chat
       i: app("Messenger"),
       d: app("Discord"),
-      s: app("Slack"),
+      s: app("Spotify"),
       z: app("Zalo"),
       l: app("Telegram"),
       e: app("Microsoft Teams"),
@@ -96,10 +99,10 @@ const rules: KarabinerRules[] = [
       f: app("Finder"),
       r: app("Texts"),
       // "i"Message
-      p: app("Spotify"),
+      p: app("PyCharm Professional Edition"),
     },
 
-    // TODO: This doesn't quite work yet.
+    // [TODO] - This doesn't quite work yet.
     // l = "Layouts" via Raycast's custom window management
     // l: {
     //   // Coding layout
@@ -180,11 +183,11 @@ const rules: KarabinerRules[] = [
         ],
       },
       d: {
-        description: "Window: Next display",
+        description: "Window: Next desktop",
         to: [
           {
             key_code: "right_arrow",
-            modifiers: ["right_control", "right_option", "right_command"],
+            modifiers: ["right_control", "right_command"],
           },
         ],
       },
@@ -289,18 +292,35 @@ const rules: KarabinerRules[] = [
       //   // TODO: Trigger Vim Easymotion when VSCode is focused
       // },
       // Scroll mode via homerow.app
-      // s: {
-      //   to: [{ key_code: "j", modifiers: ["right_control"] }],
-      // },
-      // d: {
-      //   to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
-      // },
-      // u: {
-      //   to: [{ key_code: "page_down" }],
-      // },
-      // i: {
-      //   to: [{ key_code: "page_up" }],
-      // },
+      s: {
+        to: [{ key_code: "j", modifiers: ["right_control"] }],
+      },
+      d: {
+        to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
+      },
+      u: {
+        to: [{ key_code: "page_down" }],
+      },
+      i: {
+        to: [{ key_code: "page_up" }],
+      },
+    },
+
+    // Controlling arrow like combo arrow key
+    // [FIXME] - This doesn't work yet. (don't know why)
+    a: {
+      j: {
+        to: [{ key_code: "left_arrow" }],
+      },
+      k: {
+        to: [{ key_code: "down_arrow" }],
+      },
+      i: {
+        to: [{ key_code: "up_arrow" }],
+      },
+      l: {
+        to: [{ key_code: "right_arrow" }],
+      },
     },
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
@@ -327,12 +347,13 @@ const rules: KarabinerRules[] = [
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
       p: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       s: open("raycast://extensions/peduarte/silent-mention/index"),
       k: open("raycast://extensions/henrikruscon/klack/toggleKlack"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
+      j: open("raycast://extensions/gdsmith/jetbrains/recent"),
       f: open("raycast://extensions/raycast/file-search/search-files"),
       1: open(
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
