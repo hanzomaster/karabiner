@@ -73,24 +73,26 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      b: app("Arc"),
-      t: app("Warp"),
+      b: app("Google Chrome"),
+      t: app("Kitty"),
       // Note
       n: app("Notion"),
-      m: app("Obsidian"),
+      e: app("Enchanted"),
       c: app("Notion Calendar"),
+      h: app("Huly"),
       // Code
       v: app("Visual Studio Code"),
       w: app("WebStorm"),
       j: app("IntelliJ IDEA Ultimate"),
       k: app("Docker"),
+      g: app("GoLand"),
       // Chat
       i: app("Messenger"),
       d: app("Discord"),
       s: app("Spotify"),
       z: app("Zalo"),
       l: app("Telegram"),
-      e: app("Microsoft Teams"),
+      m: app("Microsoft Teams"),
       // Open todo list managed via *H*ypersonic
       // h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
@@ -348,7 +350,8 @@ const rules: KarabinerRules[] = [
       ),
       p: open("raycast://extensions/raycast/raycast/confetti"),
       // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
+      s: open("/System/Applications/Utilities/Screenshot.app"),
+      // s: open("/System/Applications/Utilities/Screenshot.app"),
       k: open("raycast://extensions/henrikruscon/klack/toggleKlack"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"

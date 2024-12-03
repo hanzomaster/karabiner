@@ -1,4 +1,4 @@
-import { To, KeyCode, Manipulator, KarabinerRules } from "./types";
+import { KarabinerRules, KeyCode, Manipulator, To } from "./types";
 
 /**
  * Custom way to describe a command in a layer
