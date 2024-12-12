@@ -73,7 +73,7 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      b: app("Google Chrome"),
+      b: app("Arc"),
       t: app("Kitty"),
       // Note
       n: app("Notion"),
@@ -89,7 +89,7 @@ const rules: KarabinerRules[] = [
       // Chat
       i: app("Messenger"),
       d: app("Discord"),
-      s: app("Spotify"),
+      s: app("Sunsama"),
       z: app("Zalo"),
       l: app("Telegram"),
       m: app("Microsoft Teams"),
@@ -271,6 +271,8 @@ const rules: KarabinerRules[] = [
       // "T"heme
       // t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
       c: open("raycast://extensions/raycast/system/open-camera"),
+      b: open("raycast://extensions/huzef44/keyboard-brightness/toggle-keyboard-brightness"),
+      m: open("raycast://extensions/raycast/system/toggle-mute"),
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
