@@ -76,9 +76,9 @@ const rules: KarabinerRules[] = [
       b: app("Arc"),
       t: app("Kitty"),
       // Note
-      n: app("Notion"),
+      n: app("Craft"),
       e: app("Enchanted"),
-      c: app("Notion Calendar"),
+      c: app("Visual Studio Code"),
       h: app("Huly"),
       // Code
       v: app("Visual Studio Code"),
