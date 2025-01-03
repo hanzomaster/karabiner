@@ -63,7 +63,6 @@ const rules: KarabinerRules[] = [
     b: {
       t: open("https://twitter.com"),
       // Quarterly "P"lan
-      p: open("https://qrtr.ly/plan"),
       y: open("https://www.youtube.com"),
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
@@ -194,7 +193,21 @@ const rules: KarabinerRules[] = [
         ],
       },
     },
-
+    // t = "Toggle"
+    t: {
+      // Cloudflare Warp
+      w: open("raycast://extensions/anandubajith/cloudflare-warp/connect"),
+      d: open("raycast://extensions/anandubajith/cloudflare-warp/disconnect")
+    },
+    // f = "Find"
+    f: {
+      d: open("raycast://extensions/bgnfu7re/craftdocs/dailyNotes"),
+      n: open("raycast://extensions/bgnfu7re/craftdocs/search"),
+      j: open("raycast://extensions/gdsmith/jetbrains/recent"),
+      c: open("raycast://extensions/thomas/visual-studio-code/index"),
+      m: open("raycast://extensions/raycast/navigation/search-menu-items"),
+      s: open("raycast://extensions/louishuyng/tmux-sessioner/manage_tmux_windows")
+    },
     // s = "System"
     s: {
       u: {
@@ -399,7 +412,7 @@ fs.writeFileSync(
   JSON.stringify(
     {
       global: {
-        show_in_menu_bar: false,
+        show_in_menu_bar: true,
       },
       profiles: [
         {
