@@ -77,7 +77,7 @@ const rules: KarabinerRules[] = [
       // Note
       n: app("Craft"),
       e: app("Enchanted"),
-      c: app("Visual Studio Code"),
+      c: app("Notion Calendar"),
       h: app("Huly"),
       // Code
       v: app("Visual Studio Code"),
@@ -206,7 +206,8 @@ const rules: KarabinerRules[] = [
       j: open("raycast://extensions/gdsmith/jetbrains/recent"),
       c: open("raycast://extensions/thomas/visual-studio-code/index"),
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
-      s: open("raycast://extensions/louishuyng/tmux-sessioner/manage_tmux_windows")
+      s: open("raycast://extensions/louishuyng/tmux-sessioner/manage_tmux_windows"),
+      r: open("raycast://extensions/raycast/file-search/search-files")
     },
     // s = "System"
     s: {
