@@ -69,38 +69,36 @@ const rules: KarabinerRules[] = [
       g: open("https://mail.google.com"),
       h: open("https://github.com"),
     },
+    n: {
+      d: open("raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"),
+    },
     // o = "Open" applications
     o: {
       1: app("1Password"),
       b: app("Arc"),
       t: app("Kitty"),
       // Note
-      n: app("Craft"),
-      e: app("Enchanted"),
+      n: app("Obsidian"),
       c: app("Notion Calendar"),
-      h: app("Huly"),
       // Code
       v: app("Visual Studio Code"),
       w: app("WebStorm"),
       j: app("IntelliJ IDEA Ultimate"),
       k: app("Docker"),
       g: app("GoLand"),
+      p: app("PyCharm Professional Edition"),
       // Chat
       i: app("Messenger"),
       d: app("Discord"),
-      s: app("Sunsama"),
       z: app("Zalo"),
       l: app("Telegram"),
       m: app("Microsoft Teams"),
       // Open todo list managed via *H*ypersonic
-      // h: open(
-      //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      // ),
-      // "M"arkdown (Obsidian.md)
+      h: open(
+        "raycast://extensions/reboot/hypersonic/index"
+      ),
       f: app("Finder"),
       r: app("Texts"),
-      // "i"Message
-      p: app("PyCharm Professional Edition"),
     },
 
     // [TODO] - This doesn't quite work yet.
@@ -197,7 +195,9 @@ const rules: KarabinerRules[] = [
     t: {
       // Cloudflare Warp
       w: open("raycast://extensions/anandubajith/cloudflare-warp/connect"),
-      d: open("raycast://extensions/anandubajith/cloudflare-warp/disconnect")
+      d: open("raycast://extensions/anandubajith/cloudflare-warp/disconnect"),
+      b: open("raycast://extensions/huzef44/keyboard-brightness/toggle-keyboard-brightness"),
+      k: open("raycast://extensions/henrikruscon/klack/toggleKlack"),
     },
     // f = "Find"
     f: {
@@ -207,7 +207,8 @@ const rules: KarabinerRules[] = [
       c: open("raycast://extensions/thomas/visual-studio-code/index"),
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
       s: open("raycast://extensions/louishuyng/tmux-sessioner/manage_tmux_windows"),
-      r: open("raycast://extensions/raycast/file-search/search-files")
+      r: open("raycast://extensions/raycast/file-search/search-files"),
+      a: open("raycast://extensions/the-browser-company/arc/search")
     },
     // s = "System"
     s: {
@@ -341,17 +342,11 @@ const rules: KarabinerRules[] = [
       },
     },
 
-    // c = Musi*c* which isn't "m" because we want it to be on the left hand
+    // Clipboard history
     c: {
-      p: {
-        to: [{ key_code: "play_or_pause" }],
-      },
-      n: {
-        to: [{ key_code: "fastforward" }],
-      },
-      b: {
-        to: [{ key_code: "rewind" }],
-      },
+      h: open(
+        "raycast://extensions/raycast/clipboard-history/clipboard-history"
+      ),
     },
 
     // r = "Raycast"
@@ -368,12 +363,12 @@ const rules: KarabinerRules[] = [
       // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       s: open("/System/Applications/Utilities/Screenshot.app"),
       // s: open("/System/Applications/Utilities/Screenshot.app"),
-      k: open("raycast://extensions/henrikruscon/klack/toggleKlack"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
       j: open("raycast://extensions/gdsmith/jetbrains/recent"),
       f: open("raycast://extensions/raycast/file-search/search-files"),
+      t: open("raycast://extensions/raycast/translator/translate"),
       1: open(
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
       ),
