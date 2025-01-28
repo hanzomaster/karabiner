@@ -76,7 +76,7 @@ const rules: KarabinerRules[] = [
     o: {
       1: app("1Password"),
       b: app("Arc"),
-      t: app("Kitty"),
+      t: app("Things"),
       // Note
       n: app("Obsidian"),
       c: app("Notion Calendar"),
