@@ -99,6 +99,7 @@ const rules: KarabinerRules[] = [
       ),
       f: app("Finder"),
       r: app("Texts"),
+      s: app("Spotify")
     },
 
     // [TODO] - This doesn't quite work yet.
@@ -208,7 +209,9 @@ const rules: KarabinerRules[] = [
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
       s: open("raycast://extensions/louishuyng/tmux-sessioner/manage_tmux_windows"),
       r: open("raycast://extensions/raycast/file-search/search-files"),
-      a: open("raycast://extensions/the-browser-company/arc/search")
+      t: open("raycast://extensions/Codely/google-chrome/search-tab"),
+      b: open("raycast://extensions/Codely/google-chrome/search-bookmarks"),
+      h: open("raycast://extensions/Codely/google-chrome/search-history"),
     },
     // s = "System"
     s: {
