@@ -5,8 +5,25 @@ import { app, createHyperSubLayers, open, rectangle } from "./utils";
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
   {
-    description: "Hyper Key (⌃⌥⇧⌘)",
+    description: "Backtick -> Control Key",
     manipulators: [
+      {
+        description: "Backtick -> Control Key",
+        from: {
+          key_code: "grave_accent_and_tilde",
+        },
+        to: [
+          {
+            key_code: "left_control",
+          },
+        ],
+        to_if_alone: [
+          {
+            key_code: "grave_accent_and_tilde",
+          },
+        ],
+        type: "basic",
+      },
       {
         description: "Caps Lock -> Hyper Key",
         from: {
@@ -69,30 +86,28 @@ const rules: KarabinerRules[] = [
       g: open("https://mail.google.com"),
       h: open("https://github.com"),
     },
-    n: {
-      d: open("raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"),
-    },
     // o = "Open" applications
     o: {
       1: app("1Password"),
       b: app("Arc"),
-      t: app("Things"),
-      // Note
-      n: app("Obsidian"),
+      m: app("Microsoft Outlook"),
+      n: app("Notes"),
+      // Notion
       c: app("Notion Calendar"),
       // Code
       v: app("Visual Studio Code"),
       w: app("WebStorm"),
       j: app("IntelliJ IDEA Ultimate"),
-      k: app("Docker"),
+      k: app("OrbStack"),
       g: app("GoLand"),
-      p: app("PyCharm Professional Edition"),
+      p: app("PyCharm"),
+      u: app("Termius"),
       // Chat
       i: app("Messenger"),
-      d: app("Discord"),
+      d: app("Legcord"),
       z: app("Zalo"),
       l: app("Telegram"),
-      m: app("Microsoft Teams"),
+      t: app("Microsoft Teams"),
       // Open todo list managed via *H*ypersonic
       h: open(
         "raycast://extensions/reboot/hypersonic/index"
@@ -135,6 +150,7 @@ const rules: KarabinerRules[] = [
       h: rectangle("left-half"),
       l: rectangle("right-half"),
       f: rectangle("maximize"),
+      // f: open("raycast://extensions/raycast/window-management/maximize"),
       c: rectangle("center"),
       u: {
         description: "Window: Previous Tab",
@@ -194,16 +210,16 @@ const rules: KarabinerRules[] = [
     },
     // t = "Toggle"
     t: {
-      // Cloudflare Warp
-      w: open("raycast://extensions/anandubajith/cloudflare-warp/connect"),
-      d: open("raycast://extensions/anandubajith/cloudflare-warp/disconnect"),
       b: open("raycast://extensions/huzef44/keyboard-brightness/toggle-keyboard-brightness"),
       k: open("raycast://extensions/henrikruscon/klack/toggleKlack"),
+      // "D"o not disturb toggle
+      d: open(
+        `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
+      ),
     },
     // f = "Find"
     f: {
-      d: open("raycast://extensions/bgnfu7re/craftdocs/dailyNotes"),
-      n: open("raycast://extensions/bgnfu7re/craftdocs/search"),
+      a: open("raycast://extensions/the-browser-company/arc/search"),
       j: open("raycast://extensions/gdsmith/jetbrains/recent"),
       c: open("raycast://extensions/thomas/visual-studio-code/index"),
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
@@ -351,7 +367,6 @@ const rules: KarabinerRules[] = [
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
     },
-
     // r = "Raycast"
     r: {
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
@@ -372,12 +387,7 @@ const rules: KarabinerRules[] = [
       j: open("raycast://extensions/gdsmith/jetbrains/recent"),
       f: open("raycast://extensions/raycast/file-search/search-files"),
       t: open("raycast://extensions/raycast/translator/translate"),
-      1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-      ),
+      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
     },
   }),
   // {
