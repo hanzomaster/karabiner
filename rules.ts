@@ -89,7 +89,7 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      b: app("Arc"),
+      b: app("Safari"),
       m: app("Microsoft Outlook"),
       n: app("Notes"),
       // Notion
@@ -219,15 +219,14 @@ const rules: KarabinerRules[] = [
     },
     // f = "Find"
     f: {
-      a: open("raycast://extensions/the-browser-company/arc/search"),
       j: open("raycast://extensions/gdsmith/jetbrains/recent"),
-      c: open("raycast://extensions/thomas/visual-studio-code/index"),
+      v: open("raycast://extensions/thomas/visual-studio-code/index"),
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
       s: open("raycast://extensions/louishuyng/tmux-sessioner/manage_tmux_windows"),
       r: open("raycast://extensions/raycast/file-search/search-files"),
-      t: open("raycast://extensions/Codely/google-chrome/search-tab"),
-      b: open("raycast://extensions/Codely/google-chrome/search-bookmarks"),
-      h: open("raycast://extensions/Codely/google-chrome/search-history"),
+      t: open("raycast://extensions/loris/safari/cloud-tabs"),
+      b: open("raycast://extensions/loris/safari/search-bookmarks"),
+      h: open("raycast://extensions/loris/safari/search-history"),
     },
     // s = "System"
     s: {
