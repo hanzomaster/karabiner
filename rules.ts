@@ -89,9 +89,9 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      b: app("Safari"),
+      b: app("Arc"),
       m: app("Microsoft Outlook"),
-      n: app("Notes"),
+      n: app("Notion"),
       // Notion
       c: app("Notion Calendar"),
       // Code
@@ -102,11 +102,12 @@ const rules: KarabinerRules[] = [
       g: app("GoLand"),
       p: app("PyCharm"),
       u: app("Termius"),
+      y: app("Yaak"),
       // Chat
       i: app("Messenger"),
       d: app("Legcord"),
       z: app("Zalo"),
-      l: app("Telegram"),
+      l: app("Telegram Lite"),
       t: app("Microsoft Teams"),
       // Open todo list managed via *H*ypersonic
       h: open(
@@ -224,12 +225,15 @@ const rules: KarabinerRules[] = [
       m: open("raycast://extensions/raycast/navigation/search-menu-items"),
       s: open("raycast://extensions/louishuyng/tmux-sessioner/manage_tmux_windows"),
       r: open("raycast://extensions/raycast/file-search/search-files"),
-      t: open("raycast://extensions/loris/safari/cloud-tabs"),
-      b: open("raycast://extensions/loris/safari/search-bookmarks"),
-      h: open("raycast://extensions/loris/safari/search-history"),
+      b: open("raycast://extensions/plonq/orion/bookmarks"),
+      // t: open("raycast://extensions/plonq/orion/tabs"),
+      // h: open("raycast://extensions/plonq/orion/history"),
+      t: open("raycast://extensions/the-browser-company/arc/search-tabs"),
+      h: open("raycast://extensions/the-browser-company/arc/search-history"),
     },
     // s = "System"
     s: {
+      f: open("raycast://extensions/raycast/file-search/search-files"),
       u: {
         to: [
           {
