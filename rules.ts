@@ -89,7 +89,7 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      b: app("Arc"),
+      b: app("Zen"),
       m: app("Microsoft Outlook"),
       n: app("Notion"),
       // Notion
