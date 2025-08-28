@@ -8,6 +8,30 @@ const rules: KarabinerRules[] = [
 		description: "Backtick -> Control Key",
 		manipulators: [
 			{
+				type: "basic",
+				description: "Disable Ctrl+Y globally except in terminal apps",
+				from: {
+					key_code: "y",
+					modifiers: {
+						mandatory: ["control"],
+					},
+				},
+				to: [], // Empty array means the key does nothing
+				conditions: [
+					{
+						type: "frontmost_application_unless",
+						bundle_identifiers: [
+							"com.apple.Terminal",
+							"com.googlecode.iterm2",
+							"com.github.wez.wezterm",
+							"net.kovidgoyal.kitty",
+							"org.alacritty",
+							"com.mitchellh.ghostty",
+						],
+					},
+				],
+			},
+			{
 				description: "Backtick -> Control Key",
 				from: {
 					key_code: "grave_accent_and_tilde",
@@ -70,6 +94,18 @@ const rules: KarabinerRules[] = [
 			//          },
 			//        ],
 			//      },
+			{
+				description: "F6 -> Single monitor chat setup",
+				from: {
+					key_code: "f6",
+				},
+				to: [
+					{
+						shell_command: "open 'raycast://customWindowManagementCommand?&name=Single%20monitor%20chat%20setup'",
+					},
+				],
+				type: "basic",
+			},
 		],
 	},
 	...createHyperSubLayers({
@@ -371,9 +407,11 @@ const rules: KarabinerRules[] = [
 
 		// Clipboard history
 		c: {
-			h: open(
-				"raycast://extensions/raycast/clipboard-history/clipboard-history",
-			),
+			// Using Raycast's clipboard history will not work with Karabiner because it will always pop up the AI chat history
+			// h: open(
+			// 	"raycast://extensions/raycast/clipboard-history/clipboard-history",
+			// ),
+			g: app("Tower"),
 		},
 		// r = "Raycast"
 		r: {
